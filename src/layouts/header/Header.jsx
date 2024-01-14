@@ -8,7 +8,8 @@ import logoImage from "../../assets/images/1.png";
 import stickyLogoImage from "../../assets/images/2.png";
 import headerStyles from "./header.module.css";
 import PropTypes from "prop-types";
-export default function Header({ cartItem }) {
+
+export default function Header({ cartItem = [{ count: 0 }] }) {
   const [stickyNav, setStickyNav] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
@@ -53,7 +54,7 @@ export default function Header({ cartItem }) {
           <IoIosSearch size="2rem" />
           <Link to={pathConstants.CART} className={headerStyles.cartIconContainer}>
             <GiShoppingCart size="2.4rem" />
-            {cartItem.length > 0 && <div className={headerStyles.cartItemCount}>{countCartItem()}</div>}
+            {cartItem.length > 0 && cartItem[0].count !== 0 && <div className={headerStyles.cartItemCount}>{countCartItem()}</div>}
           </Link>
         </div>
       </div>
@@ -112,5 +113,5 @@ export default function Header({ cartItem }) {
 }
 
 Header.propTypes = {
-  cartItem: PropTypes.array.isRequired,
+  cartItem: PropTypes.array,
 };
