@@ -1,0 +1,36 @@
+@font-face {
+  font-family: headerFont;
+  src: url(./assets/Fonts/headerFont.ttf);
+}
+
+@font-face {
+  font-family: bodyFont;
+  src: url(./assets/Fonts/bodyFont.ttf);
+}
+
+:root {
+  --primary: red;
+  --secondary: black;
+  --accent: #c04a26;
+  --background: white;
+  --text: white;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: bodyFont;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 120vh;
+}
+
+main {
+  flex: 1;
+}

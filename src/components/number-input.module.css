@@ -1,0 +1,63 @@
+.btn-group {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid rgb(201, 195, 195);
+  transition: border 0.3s ease;
+  height: 2rem;
+}
+
+.btn-group:hover {
+  border: 1px solid #030303;
+}
+
+.increment-btn,
+.decrement-btn {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4097fe;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.increment-btn:hover {
+  background-color: #f3f9ff;
+}
+
+.decrement-btn:hover {
+  background-color: #fff3f3;
+}
+.increment-btn .btn-text {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.decrement-btn .btn-text {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: #ff3131;
+}
+
+.decrement-btn:disabled .btn-text {
+  color: gray;
+}
+
+.decrement-btn:disabled:hover {
+  background-color: transparent;
+}
+
+.count {
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #f5f8fb;
+  border-right: 1px solid #f5f8fb;
+}

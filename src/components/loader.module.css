@@ -1,0 +1,28 @@
+.loading-icon {
+  color: #ff3131;
+  animation: animate 2s infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+.container {
+  position: fixed;
+  top: 21%;
+  left: 50%;
+  font-size: 4rem;
+}
+
+@media only screen and (max-width: 690px) {
+  .container {
+    position: fixed;
+    left: 45%;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,252 @@
+.mainContainer {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+caption {
+  font-family: headerFont;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  padding: 1rem 0rem 0.5rem 0rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+th {
+  text-align: center;
+  border-bottom: 2px solid rgb(51, 50, 50);
+  padding: 2rem 4rem 0.5rem 0rem;
+  font-size: 1.2rem;
+  font-family: bodyFont;
+  letter-spacing: 2px;
+}
+
+td {
+  text-align: center;
+  border-bottom: 1px solid rgb(51, 50, 50);
+  padding: 1rem 4rem 1rem 0rem;
+  font-size: 1.2rem;
+  font-family: headerFont;
+  font-weight: 800;
+}
+
+td.last-col {
+  padding-right: 0rem;
+}
+
+.item-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.img-container {
+  border: 4px solid rgb(168, 166, 166);
+  padding: 0.2rem 0.4rem 0.4rem 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.item-title {
+  width: 15rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: headerFont;
+}
+
+.remove {
+  outline: none;
+  border: 1px solid #ff3131;
+  background-color: #ff3131;
+  width: 5rem;
+  font-size: 0.9rem;
+  padding: 0.4rem 0rem;
+  cursor: pointer;
+  color: white;
+  font-weight: 800;
+}
+
+.empty-cart-container {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.empty-info {
+  text-align: center;
+  font-size: 2rem;
+  font-family: headerFont;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.shop-now {
+  text-decoration: none;
+  background-color: #ff3131;
+  color: white;
+  font-family: headerFont;
+  font-weight: 800;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  letter-spacing: 2px;
+}
+
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.subtotal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  border-bottom: 1px solid grey;
+  padding-bottom: 1rem;
+}
+
+.subtotal-main {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.subtotal {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.subtotal-amount {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  font-weight: 760;
+}
+
+.subtotal-info {
+  font-size: 0.8rem;
+  font-family: headerFont;
+}
+
+.checkout-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.checkout-btn {
+  outline: none;
+  background-color: black;
+  border: 1px solid black;
+  padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+  color: white;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.keep-shopping {
+  color: black;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 970px) {
+  thead {
+    display: none;
+  }
+
+  td {
+    border: none;
+    padding: 0rem;
+  }
+
+  .cart-item-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "info price qty"
+      "info total rmv";
+    border-bottom: 1px solid rgb(51, 50, 50);
+    padding: 1rem 0rem;
+  }
+
+  .item-container {
+    flex-direction: column;
+  }
+
+  .first-col {
+    grid-area: info;
+    place-self: center;
+  }
+
+  .quantity {
+    grid-area: qty;
+    width: 4rem;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .total {
+    grid-area: total;
+    font-size: 1rem;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .total::before {
+    content: "Total: ";
+    font-size: 1rem;
+  }
+
+  .price {
+    grid-area: price;
+    font-size: 1rem;
+    place-self: center;
+  }
+
+  .price::before {
+    content: "Price: ";
+    font-size: 1rem;
+  }
+
+  .last-col {
+    grid-area: rmv;
+    place-self: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .item-title {
+    width: 8rem;
+  }
+}
