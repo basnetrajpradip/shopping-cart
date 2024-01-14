@@ -15,7 +15,7 @@ export default function ErrorPage() {
         <div className={errorStyles.errorHero}>
           <div className={errorStyles.errorValue}>404</div>
           <div className={errorStyles.errorName}>PAGE NOT FOUND</div>
-          <div className={errorStyles.errorDetails}>The page you are looking for does&apos;t exist or an error occurred.</div>
+          <div className={errorStyles.errorDetails}>The page you&apos;re looking for does&apos;t exist or an error occurred.</div>
         </div>
         <Link to={pathConstants.HOME}>
           <button className={errorStyles.homeBtn}>GO TO HOME</button>
